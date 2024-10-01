@@ -1,47 +1,37 @@
-# Welcome to Remix + Cloudflare!
+# Create sitemap with Remix + Vite + Cloudflare
 
-- 📖 [Remix docs](https://remix.run/docs)
-- 📖 [Remix Cloudflare docs](https://remix.run/guides/vite#cloudflare)
+Clone repo and install packages:
 
-## Development
+```bash
+git clone https://github.com/caprolactam/remix-cloudflare-sitemap.git
+cd ./remix-cloudflare-sitemap
+npm i
+```
 
-Run the dev server:
+Build app for creating sitemap:
 
-```sh
+```bash
+npm run build
+```
+
+Run the app with the dev server:
+
+```bash
 npm run dev
 ```
 
-To run Wrangler:
+Then, visit <http://localhost:5173/sitemap.xml>.
 
-```sh
-npm run build
+Of course, You can run the app with Wrangler:
+
+```bash
 npm run start
 ```
 
-## Typegen
+Then, visit <http://127.0.0.1:8788/sitemap.xml>
 
-Generate types for your Cloudflare bindings in `wrangler.toml`:
+## What is this repo?
 
-```sh
-npm run typegen
-```
-
-You will need to rerun typegen whenever you make changes to `wrangler.toml`.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then, deploy your app to Cloudflare Pages:
-
-```sh
-npm run deploy
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Creating a sitemap as static assets.
+I used Remix offial cloudflare template and `@nasa-gcn/remix-seo`.
+You can check the changes from [commits](https://github.com/caprolactam/remix-cloudflare-sitemap/commits/main/).
